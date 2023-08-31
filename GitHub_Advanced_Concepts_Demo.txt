@@ -5,14 +5,33 @@ In this document, we'll explore some advanced concepts in GitHub version control
 1. Cherry-pick:
    Cherry-picking allows you to select specific commits from one branch and apply them to another. This can be useful when you want to incorporate specific changes without merging the entire branch.
 
+   To perform a cherry-pick:
+   ```bash
+   git checkout main
+   git cherry-pick <commit-hash>
+
 2. Rebase:
    Rebasing involves moving the entire branch to a new base commit. This is often used to keep a clean commit history by incorporating changes from one branch onto another.
 
+   To perform a rebase:
+   git checkout feature-advanced-demo
+   git rebase main
+  
+
 3. Stash:
    Stashing allows you to temporarily save changes that are not ready for commit. This is useful when you need to switch branches or perform other operations without losing your work.
+   
+   To stash and apply changes:
+   git stash
+   # Do other work
+   git stash apply
+
 
 4. Reset:
    Resetting moves the branch pointer to a specific commit, effectively discarding any commits after that point. It's useful for undoing changes or resetting a branch to a previous state.
+   
+   To reset to a specific commit:
+   git reset <commit-hash> --hard
 
-Now let's implement these concepts.
+
 
